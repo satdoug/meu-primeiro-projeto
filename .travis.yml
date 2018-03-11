@@ -1,9 +1,8 @@
 language: java
 jdk:
   - oraclejdk8
-before_script: 
-  - chmod a+x ./mvnw
-  - chmod a+x ./mvn
+before:
+ - chmod a+x ./mvn
 install:
   - mvn -N io.takari:maven:wrapper
   - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
